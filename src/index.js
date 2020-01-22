@@ -10,6 +10,8 @@ const database = require('./database');
 const server = require('./app');
 const log = require('./utils/log');
 
+const uri = process.env.MONGO_URI || Config.mongodb;
+
 // Configuración del servidor indicada por parámetros de usuario?
 const CONFIG = {
     HTTPS: process.env.HTTPS,
@@ -26,7 +28,7 @@ initServer()
 async function initServer() {
     try {
         // Conectar a BD
-        let connected = await database.connectToMongo(Config.mongodb);
+        let connected = await database.connectToMongo(uri);
         if (connected === false) {
             log.fatal('Se cierra la aplicación dado que no es posible conectar a mongodb');
             process.exit(1);
