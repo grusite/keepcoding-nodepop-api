@@ -2,6 +2,7 @@
 
 ### Contents
 - [Introducción](#INTRODUCCION)
+- [Practica DevOps] (#PRACTICA-DEVOPS)
 - [Instalación y ejecución](#INSTALACIÓN-Y-EJECUCIÓN)
   - [Descarga](#Descarga)
   - [Instalación](#Inicialización-de-base-de-datos)
@@ -18,6 +19,14 @@
   - [Actualizar un anuncio](#Actualizar-un-anuncio)
 - [Web](#location)
   - [Ejemplo de vista de anuncios](#location-schema)
+
+### PRACTICA-DEVOPS
+
+He subido la practica de backend de node del alumno llamado Ismael ya que es el back que hemos terminado usando para hacer las prácticas de React y por comodidad y conocimiento del mismo lo he usado.
+
+Los datos de la estancia de AWS son:
+ - http://ec2-34-249-168-192.eu-west-1.compute.amazonaws.com/ - URL del servidor de AWS donde está alojada la práctica de Node. Está protegida con autenticación y está configurada con PM2 para que cuando se reinicie el servidor la aplicación esté siempre funcionando. Además, para los ficheros estáticos le he añadido una etiqueta llamda X-Owner: grusite. Por último, he configurado nginx para que cada vez que se llame a la aplicación desde el DNS, la aplicación sea capaz de reenviar la llamada a su respectivo DNS.
+ - http://34.249.168.192/ - IP del servidor donde podrás acceder a la web estástica
 
 ### INTRODUCCION
 
