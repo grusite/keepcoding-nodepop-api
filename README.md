@@ -27,6 +27,10 @@ He subido la practica de backend de node del alumno llamado Ismael ya que es el 
 Los datos de la estancia de AWS son:
  - http://ec2-34-249-168-192.eu-west-1.compute.amazonaws.com/ - URL del servidor de AWS donde está alojada la práctica de Node. Está protegida con autenticación y está configurada con PM2 para que cuando se reinicie el servidor la aplicación esté siempre funcionando. Además, para los ficheros estáticos le he añadido una etiqueta llamda X-Owner: grusite. Por último, he configurado nginx para que cada vez que se llame a la aplicación desde el DNS, la aplicación sea capaz de reenviar la llamada a su respectivo DNS.
  - http://34.249.168.192/ - IP del servidor donde podrás acceder a la web estástica
+ 
+ **Nota**: Cada vez que se reinicia el servidor la URL y la IP cambian, por lo que habría que cambiar el server_name del /etc/nginx/site_availables/apps por el nuevo, reiniciar y listo.
+ 
+ **Nota 2**: No olvidar que para conectarse a la máquina hay que usar el nuevo puerto ssh (se ve en Security Group Inbound) y la nueva URL/IP.
 
 ### INTRODUCCION
 
